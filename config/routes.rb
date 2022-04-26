@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#login'
       get '/sign_up', to: 'registration#new'
       post '/sign_up', to: 'registration#create'
+      resources :lessons
     end
   end
 end
