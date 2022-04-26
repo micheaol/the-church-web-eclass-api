@@ -1,4 +1,8 @@
 class Api::V1::RegistrationController < ApplicationController
+    before_action :authorize_request, except: :create
+    before_action :find_user, except: %i[create index]
+
+    
     def new
         @user = User.new
     end

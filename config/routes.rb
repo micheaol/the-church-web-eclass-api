@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get '/sign_up', to: 'registration#new'
       post '/sign_up', to: 'registration#create'
       resources :lessons
+      
     end
   end
 end
